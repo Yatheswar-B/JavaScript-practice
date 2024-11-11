@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="text" id="c">
+    <input type="text" id="d">
+    <button class="submit">submit</button>
+</body>
+    <script>
+        
+        let sub=document.getElementsByClassName("submit")[0];
+     
+         sub.addEventListener("click",()=>{
+            let a=parseFloat(document.getElementById("a").value);
+        let b=parseFloat(document.getElementById("b").value);
+        let c=parseFloat(document.getElementById("c").value);
+        let d=parseFloat(document.getElementById("d").value);
+        let num=[a,b,c,d];
+            let largest=num[0];
+             for (let i = 1; i < num.length; i++) {
+                   if (num[i]>largest) {
+                         largest=num[i];
+                   }
+                
+             }
+             document.write(largest);
+         })
+    </script>
+</html>

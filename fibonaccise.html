@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+     <button>submit</button>
+     <p>result :</p>
+</body>
+
+<script>
+    document.getElementsByTagName("button")[0].addEventListener("click",()=>{
+        let a=parseInt(document.getElementsByTagName("input")[0].value);
+        let b=0;
+        let c=1;
+        let d=0;
+        let res=document.getElementsByTagName("p")[0];
+        for (let i = 0; i < a; i++) {
+            if (b<a) {
+                res.innerText= res.textContent+b+" ,"; 
+                d=b+c;
+                b=c;
+                c=d;
+            }
+        }
+    })
+
+</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>signup</h1>
+    <input type="text" id="name">
+    <input type="text" id="email">
+    <input type="text" id="password">
+    <button onclick="signup()">submit</button>
+    <h2>login</h2>
+    <input type="text" id="emaill">
+    <input type="text" id="passwordl">
+    <button onclick="login()">submit</button>
+    <p>login status :</p>
+    
+</body>
+<script>
+    class User {
+        #id;
+        #name;
+        #email;
+        #password;
+        #cart;
+        #orders;
+
+        constructor(id, name, email, password, cart, orders) {
+            this.#id = id;
+            this.#name = name;
+            this.#email = email;
+            this.#password = password;
+            this.#cart = cart;
+            this.#orders = orders;
+        }
+        
+        get name() {
+            return this.#name;
+        }
+
+        set name(newName) {
+            this.#name = newName;
+        }
+
+        get email(){
+            return this.#email;
+        }
+
+        set email(newemail){
+            this.#email=newemail;
+        }
+
+        get cart() {
+            return this.#cart;
+        }
+
+        set cart(newCart) {
+            this.#cart = newCart;
+        }
+
+        get password(){
+            return this.#password;
+        }
+
+        set password(newpassword){
+            this.#password=newpassword;
+        }
+
+    } 
+
+    class Product {
+        #id;
+        #name;
+        #price;
+
+        constructor(id, name, price) {
+            this.#id = id;
+            this.#name = name;
+            this.#price = price;
+        }
+
+        // Getters and setters
+        get name() {
+            return this.#name;
+        }
+
+        set name(newName) {
+            this.#name = newName;
+        }
+
+        get price() {
+            return this.#price;
+        }
+
+        set price(newPrice) {
+            this.#price = newPrice;
+        }
+    }
+
+    class Cart {
+        #products;
+
+        constructor() {
+            this.#products = [];
+        }
+
+        addProduct(product) {
+            this.#products.push(product);
+        }
+
+        get products() {
+            return this.#products;
+        }
+    }
+    
+     var users=[];
+
+    function signup(){
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let password=document.getElementById("password").value;
+        let user=new User(1,name,email,password); 
+        users.push(user);
+    }
+
+     function login() {
+        let email=document.getElementById("emaill").value;
+        let password=document.getElementById("passwordl").value;
+          for (let i = 0; i < users.length; i++) {
+
+            if (email==users[i].email) {
+            if (password==users[i].password) {
+                console.log("hellowp");
+                let res=document.getElementsByTagName("p")[0];
+                console.log("hellowp");
+                res.innerText=res.textContent + "logined sucessfully";
+            }
+        }
+          }
+        
+        
+        console.log("hellow2");
+     }
+
+
+</script>
+</html>

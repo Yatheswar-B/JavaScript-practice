@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM Simulator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #balance {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>ATM Simulator</h2>
+    <div id="balance">Balance: $1000</div>
+    <input type="number" id="amount" placeholder="Enter amount">
+    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="deposit()">Deposit</button>
+</div>
+
+<script>
+    let balance = 1000;
+
+    function updateBalance() {
+        document.getElementById("balance").innerText = "Balance: $" + balance;
+    }
+
+    function withdraw() {
+        let amount = parseFloat(document.getElementById("amount").value);
+        if (isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid amount to withdraw.");
+            return;
+        }
+        if (amount > balance) {
+            alert("Insufficient funds.");
+            return;
+        }
+        balance -= amount;
+        updateBalance();
+        alert("$" + amount + " withdrawn successfully.");
+    }
+
+    function deposit() {
+        let amount = parseFloat(document.getElementById("amount").value);
+        if (isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid amount to deposit.");
+            return;
+        }
+        balance += amount;
+        updateBalance();
+        alert("$" + amount + " deposited successfully.");
+    }
+</script>
+
+</body>
+</html>

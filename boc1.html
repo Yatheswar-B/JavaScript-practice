@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a(iter) {
+            let div=document.createElement("div")
+        div.textContent=iter;
+        div.style.width="200px";
+        div.style.height="200px";
+        div.style.backgroundColor="yellow";
+        div.style.display="flex";
+        div.style.justifyContent="center";
+        div.style.alignItems="center";
+        document.body.append(div);
+        }
+
+        for (let index = 0; index < 12; index++) {
+           a(index);
+            
+        }
+         document.addEventListener("readystatechange",(even)=>{
+            if(even.target.readyState === "complete"){
+                console.log("complete");
+            }
+         })
+
+        
+    </script>
+</body>
+</html>

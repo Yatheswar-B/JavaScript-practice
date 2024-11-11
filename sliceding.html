@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Divs in Rows</title>
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0px,0px);
+            }
+            50%{
+                transform: translateX(0px,0px);
+            }
+            100%{
+                transform: translate(-100vw,0px)
+            }
+            
+        }
+
+        body {
+            border: 2px solid black;
+            width: 200vh;
+            height: 700px;
+        }
+
+        section {
+            border: 2px solid rgb(42, 201, 116);
+            width: 80vw;
+            height: 600px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            gap: 30px;
+            overflow: hidden;
+            
+        }
+
+        .box {
+            width: 79vw;
+            height: 550px;
+            flex-shrink: 0;
+            border: 2px solid rgb(150, 20, 20);
+            border-radius: 10px;
+            animation-name: slide;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+
+        .box:nth-child(1) {
+            background-color: blanchedalmond;
+            animation-delay: 0s;
+        }
+
+        .box:nth-child(2) {
+            background-color: brown;
+            animation-delay: 10s;
+        }
+
+        .box:nth-child(3) {
+            background-color: chartreuse;
+            animation-delay: 20s;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+</body>
+</html>

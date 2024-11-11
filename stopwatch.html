@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let fram=document.createElement("section")
+         fram.style.backgroundColor='yellow'
+         fram.style.height='400px'
+         fram.style.width='600px'
+          fram.style.display='flex'
+          fram.style.alignItems='center'
+          fram.style.justifyContent='center'
+          fram.style.flexDirection='column'
+
+
+         document.body.appendChild(fram)
+        document.body.style.margin='0'
+        document.body.style.padding='0'
+        document.body.style.boxSizing='border-box'
+         document.body.style.display='flex'
+         document.body.style.alignItems='cenater'
+         document.body.style.justifyContent='center'
+         document.body.style.minHeight='100vh'
+         document.body.style.backgroundColor='aqua'
+
+         let div=document.createElement('div')
+         let hours=document.createElement('h1')
+         let minutes=document.createElement('h1')
+         let seconds=document.createElement('h1')
+         let h=document.createElement('h1')
+         h.innerText=':'
+         let m=document.createElement('h1')
+         m.innerText=':'
+         let s=document.createElement('h1')
+         s.innerText=':'
+          div.appendChild(hours)
+          div.appendChild(h)
+          div.appendChild(minutes)
+          div.appendChild(m)
+          div.appendChild(seconds)
+          
+          fram.appendChild(div)
+          div.style.height='100px'
+         div.style.width='400px'
+          div.style.display='flex'
+          div.style.alignItems='center'
+          div.style.justifyContent='space-evenly'
+        //   div.style.backgroundColor='blue'
+        
+
+
+          
+
+          let div1=document.createElement('div')
+          
+         let start=document.createElement('button')
+         start.innerText='start'
+         let reset=document.createElement('button')
+         reset.innerText='reset'
+         let p=document.createElement('button')
+         p.innerText='stop'
+          div1.style.display='flex'
+          div1.style.alignItems='center'
+          div1.style.justifyContent='space-evenly'
+          div1.style.height='100px'
+         div1.style.width='400px'
+         div1.appendChild(start)
+          div1.appendChild(reset)
+          div1.appendChild(p)
+          fram.appendChild(div1)
+
+          let a=0;
+        let b=0;
+        let c=0;
+        hours.innerText=a
+          minutes.innerText=b
+          seconds.innerText=c
+
+          start.onclick=function(){
+
+          time=setInterval(function(){
+            
+            if (a>=60) {
+            a=0
+
+          }
+          else{
+            if (b>=60) {
+                b=0
+                a++
+            }
+            else{
+                if (c>=60) {
+                    c=0
+                    b++
+                }
+                else{
+                    c++
+                }
+            }
+          }
+          hours.innerText=a
+          minutes.innerText=b
+          seconds.innerText=c
+          },1000);}
+            
+
+          p.onclick=function(){
+            clearInterval(time)
+          }
+
+          reset.onclick=function(){
+            clearInterval(time)
+            hours.innerText=0
+          minutes.innerText=0
+          seconds.innerText=0
+          }
+          
+          
+          
+
+         
+         
+    </script>
+    
+</body>
+<style>
+  h1{
+    color: red;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  button{
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    background-color: yellow;
+  }
+</style>
+</html>

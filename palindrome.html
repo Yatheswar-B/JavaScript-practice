@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="palin">
+    <button>submit</button>
+    <p>result :</p>
+</body>
+
+<script>
+    let sub=document.getElementsByTagName("button");
+    sub[0].addEventListener("click",()=>{
+        let num=document.getElementsByClassName("palin")[0].value;
+        let reverse=num.split('').reverse().join('');
+       if (reverse==num){
+         let result=document.getElementsByTagName("p")[0];
+          result.innerText=result.textContent + num+"is a palindrom number";
+         
+       }
+    })
+    
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mega</title>
+    <link rel="icon" href="WhatsApp Image 2024-06-27 at 20.06.56_0eeddbb6.png" type="image/x-icon">
+   
+   
+</head>
+<body>
+     
+    <button style="border: 2px solid #408090; font-size: 60px;">click me</button>
+     <h1></h1>
+    <script>
+         
+        
+        document.addEventListener("readystatechange",(event)=>{
+            if (event.target.readyState === "complete") {
+                initapp();
+                
+            }
+        })
+
+
+        function initapp(){
+            let a=['#FF5733', 'yellow', '#3357FF', 'red', '#FF33A6']
+            let button=document.getElementsByTagName("button");
+            let h1=document.getElementsByTagName("h1")[0];
+            button[0].addEventListener("click",()=>{
+                let color=Math.floor(Math.random()*a.length); 
+                let o= document.body.style.backgroundColor=a[color];
+               
+                console.log(o);
+                
+                h1.textContent=o;
+            })
+        }      
+
+    </script>
+</body>
+</html>

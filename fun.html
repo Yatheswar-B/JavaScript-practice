@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function a(a,b) {
+    //     return a+b
+    // }
+    // console.log(a(3,5));
+    
+    //     var b=function() {
+    //         return 3+5;
+    //     }
+    //     console.log(b());
+
+    //     var c=()=>{
+    //         return 4+7;
+    //     }
+    //     console.log(c());
+
+    //     function d(){
+    //       var a=3;
+    //        function name() {
+    //         return a*3
+    //       }
+    //      return name()
+    //     }
+    //     console.log(d());
+
+    //     function s(g,b) {
+    //         return g*b
+    //     }
+        
+    //     function f(){
+    //         return 3
+    //     }
+        
+    //     console.log(s(f(),5));
+
+     let a=[1,6,5,7]
+
+        console.log(a);
+
+        // let b=new Array();
+        // b.push(1);
+        // b.push(2);
+        // b.unshift(0)
+        // // b.pop()
+        // // b.shift()
+        // console.log(b);
+        // // b.reverse()
+
+        // console.log(b.reverse());
+
+        // console.log(a.slice(1,-1));
+        // console.log(a.splice(1,0,2));
+        // console.log(a.splice(2,0,4));
+
+        // console.log(a.at(2));
+        // console.log(a.length);
+        // console.log(a.indexOf());
+
+        // console.log(a.includes(8));
+
+        // console.log(a.join(''));
+
+
+        // console.log(a.sort());
+
+        // console.log(a.reverse());
+        
+        // var word=['apple','banna','kk','ant'];
+
+        // var result=word.filter(function(num){
+        //     return num
+        // })
+
+        // console.log(result);
+        
+        // var r=a.map(num=>num*3)
+        // console.log(r);
+
+        // var f=word.map(num=>{
+        //     if (num.charAt(0)==='a') {
+        //         return num;
+        //     }
+        // })
+        // console.log(f);
+
+        let fruits = ['apple', 'banana', 'orange', 'apple', 'banana', 'apple'];
+
+let count = fruits.reduce(function(an, fruit) {
+   if (an[fruit]==fruit) {
+        an[fruit]=1;
+        console.log("h");
+   }
+   else{
+    an[fruit]+=1;   
+    console.log("g");
+   }
+   return an;   
+}, {});
+
+console.log(count);  // Output: { apple: 3, banana: 2, orange: 1 }
+
+
+
+
+
+// let r={};
+// r.city='chittoor'
+// r.name='yatheswar'
+// r.age=33
+// console.log(r);
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        console.log(a);
+
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

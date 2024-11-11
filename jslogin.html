@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+
+    <!-- <div style="height: 200px; width: 300px;border: 2px solid black;"></div>     -->
+    <script>
+
+        // document.body.style.height="0px";
+        // document.body.style.width="0px";
+        // document.body.style.padding="0px";
+        // document.body.style.margin="0px";
+        document.body.style.display="flex";
+         document.body.style.justifyContent="center";
+         document.body.style.alignItems="center";
+        let sec = document.createElement("section");
+        sec.setAttribute("id","y");
+        sec.style.display="flex";
+        sec.style.justifyContent="center";
+        sec.style.alignItems="center";
+        sec.style.flexDirection='column'
+        sec.style.border="2px solid black";
+        sec.style.height="400px";
+        sec.style.width="300px";
+        sec.style.borderRadius="20px"
+        let d=document.createElement("div");
+        d.style.height="50px";
+        d.style.width="300px";
+        d.style.display="flex";
+        d.style.justifyContent="space-around";
+        
+        let email=document.createElement("input");
+        email.style.height="40px";
+        email.style.width="270px";
+        email.style.borderRadius="10px";
+        email.setAttribute("type","email")
+        email.setAttribute("placeholder","email")
+        let br=document.createElement("br");
+        let br1=document.createElement("br");
+        let br2=document.createElement("br");
+        let  password=document.createElement("input");
+        password.style.height="40px";
+        password.style.width="270px";
+        password.style.borderRadius="10px";
+        password.setAttribute("type","password")
+        password.setAttribute("placeholder","password")
+        let login=document.createElement("button");
+        login.innerText='login';
+        login.style.height="40px";
+        login.style.width="100px";
+        login.style.borderRadius="10px";
+        let signup=document.createElement("button");
+        signup.innerText='signup';
+        signup.style.height="40px";
+        signup.style.width="100px";
+        signup.style.borderRadius="10px";
+
+        document.body.appendChild(sec);
+        sec.appendChild(email);
+        sec.appendChild(br);
+        sec.appendChild(password);
+        sec.appendChild(br1);
+        d.appendChild(login);
+        d.appendChild(signup);
+        sec.appendChild(d)
+         
+        email.onfocus = function() {
+    email.setAttribute("placeholder", "");
+};
+
+// Add onblur event for the email input (to restore placeholder when focus is lost)
+email.onblur = function() {
+    email.setAttribute("placeholder", "email");
+};
+
+        console.log(document.body)
+
+      
+    </script>
+    <!-- <h1 style="border: 2px solid black; height: 10px; width: 100px;">asddfg</h1> -->
+    
+</body>
+</html>

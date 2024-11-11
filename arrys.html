@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=['a','b','c','d','e'];
+        arr.filter((value)=>{
+            if (value=='c') {
+                console.log(value);
+                
+            }
+        })
+        let b=[1,2,3,4,5];
+        let c=new Array();
+        let count=b.length-1;
+        b.map((value)=>{
+             c.push(value*b[count]);
+             count--;
+        })
+
+        console.log(c); 
+
+
+        let a=[1,2,3,4,5];
+
+       let h= a.reduce((acumulator,value,index,arrya)=>{
+
+           return acumulator*value
+        },1)
+        console.log(h);
+        
+         let j=["banana","apple","orange","watermelon"];
+        console.log(j.at(1));
+        console.log(j.concat(a));
+         
+        console.log(j.splice(1,0,"kiwi"));
+        console.log(j);
+
+        console.log(j.slice(0,3));
+        console.log(j);
+        
+        let name=['y','a','t','h','e','s','w','a','r'];
+        let name1=name.join('');
+        console.log(name.join(''));
+        
+        console.log(name1.split(''));
+
+        let f=[1,2,3,[1,2,[12,4,56,4],4],65]
+        let s=f.flat();
+         console.log(f.flat());
+         console.log(s.flat());
+         
+        // console.log(j.fill("hello"));
+        console.log(j);
+        
+       console.log( j.includes('banan'));
+
+    console.log(j.indexOf('kiwi'));
+    
+
+        console.log(j.reverse());
+        // console.log(j.lastIndexOf('apple'));
+        let k=3.6866;
+
+        console.log(Math.pow(k,2));
+
+        console.log(k.toFixed(2));
+        
+        let add="2*6";
+         let res=eval(add)
+        console.log(typeof res);
+        
+        let g=[1,2,3,4,5,6,5,7,8]
+
+        console.log(g.indexOf(5));
+        console.log(g.lastIndexOf(5));
+        
+        console.log(g.find((value)=>{
+           if (value>4) {
+               return value;
+           }
+        }));
+
+        console.log(g.findIndex((value)=>{
+            if (value>4) {
+                return value;
+            }
+        }));
+        
+
+        console.log(g.findLast((value)=>{
+            if (value>4) {
+                return value;
+            }
+        }));
+        
+
+        console.log(g.findLastIndex((value)=>{
+            if (value>4) {
+                return value;
+            }
+        }));
+        
+        console.log(g.length);
+
+        console.log(j.some((value)=>{
+             if (value=='banana') {
+                return value;
+             }
+        }));
+        
+        console.log(j.every((value)=>{
+             if (value=='banana') {
+                return value;
+             }
+        }));
+        
+        
+        
+        
+         
+        
+
+    </script>
+</body>
+</html>

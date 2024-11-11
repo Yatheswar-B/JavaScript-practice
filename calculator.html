@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a" placeholder="number">
+    <input type="text" id="b" placeholder="sysmbol(*,+,/,-)">
+    <input type="number" id="c" placeholder="number">
+    <button onclick="cal()">calculate</button>
+     
+    <script>
+        function cal() {
+        let a=document.getElementById("a").value;
+        let b=document.getElementById("b").value;
+        let c=document.getElementById("c").value;
+
+        if (b=='+') {
+            let total=parseInt(a)+parseInt(c);
+            document.write(total);
+        }
+        else{
+            if (b=='-') {
+                document.write(parseInt(a)-parseInt(c));
+            }
+            else{
+                if (b=='/') {
+                    document.write(parseInt(a)/parseInt(c));
+                }
+                else{
+                    if (b=='*') {
+                        document.write(parseInt(a)*parseInt(c));
+                    }
+                }
+            }
+        }
+
+        }
+        
+    </script>
+</body>
+</html>
